@@ -1,0 +1,51 @@
+﻿  forest_evolution.c
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(45): error C2001: 常量中有换行符
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(46): error C2143: 语法错误: 缺少“)”(在“while”的前面)
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(68): error C2371: “print_allIDs”: 重定义；不同的基类型
+  c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(27): note: 参见“print_allIDs”的声明
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(69): error C2059: 语法错误:“for”
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(69): error C2143: 语法错误: 缺少“{”(在“<=”的前面)
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(69): error C2059: 语法错误:“<=”
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(69): error C2143: 语法错误: 缺少“{”(在“++”的前面)
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(69): error C2059: 语法错误:“++”
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(69): error C2059: 语法错误:“)”
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(73): error C2059: 语法错误:“for”
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(73): error C2143: 语法错误: 缺少“{”(在“<=”的前面)
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(73): error C2059: 语法错误:“<=”
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(73): error C2143: 语法错误: 缺少“{”(在“++”的前面)
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(73): error C2059: 语法错误:“++”
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(73): error C2059: 语法错误:“)”
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(77): error C2001: 常量中有换行符
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(77): error C2143: 语法错误: 缺少“)”(在“字符串”的前面)
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(77): error C2143: 语法错误: 缺少“{”(在“字符串”的前面)
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(77): error C2059: 语法错误:“字符串”
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(79): error C2059: 语法错误:“}”
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(105): error C2001: 常量中有换行符
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(106): error C2143: 语法错误: 缺少“)”(在“break”的前面)
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(116): error C2001: 常量中有换行符
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(117): error C2143: 语法错误: 缺少“)”(在“break”的前面)
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(125): warning C4474: printf: 格式字符串中传递的参数太多
+  c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(125): note: 占位符和其参数预计 0 可变参数，但提供的却是 2 参数
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(133): warning C4474: printf: 格式字符串中传递的参数太多
+  c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(133): note: 占位符和其参数预计 1 可变参数，但提供的却是 2 参数
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(141): warning C4474: printf: 格式字符串中传递的参数太多
+  c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(141): note: 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(146): error C2001: 常量中有换行符
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(147): error C2146: 语法错误: 缺少“)”(在标识符“scanf”的前面)
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(178): warning C4474: printf: 格式字符串中传递的参数太多
+  c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(178): note: 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(187): warning C4474: printf: 格式字符串中传递的参数太多
+  c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(187): note: 占位符和其参数预计 1 可变参数，但提供的却是 2 参数
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(190): warning C4474: printf: 格式字符串中传递的参数太多
+  c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(190): note: 占位符和其参数预计 1 可变参数，但提供的却是 2 参数
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(335): error C2001: 常量中有换行符
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(336): error C2143: 语法错误: 缺少“)”(在“类型”的前面)
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(337): error C2065: “suit”: 未声明的标识符
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(337): error C2065: “letter”: 未声明的标识符
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(337): warning C4477: “scanf”: 格式字符串“%c”需要类型“char *”的参数，但可变参数 1 拥有了类型“int *”
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(337): warning C4477: “scanf”: 格式字符串“%c”需要类型“char *”的参数，但可变参数 2 拥有了类型“int *”
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(338): error C2065: “suit”: 未声明的标识符
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(338): error C2065: “letter”: 未声明的标识符
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(340): error C2065: “suit”: 未声明的标识符
+c:\users\hhw\source\repos\forest_evolution\forest_evolution\forest_evolution.c(341): error C2065: “letter”: 未声明的标识符
