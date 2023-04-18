@@ -3,11 +3,10 @@
 #define GENEMUT_EFFECT 3
 #define CERBERUS_EFFECT 3
 #define WOLFKING_EFFECT 3
-#define NOTFOUND -1
 
-int i_host = NOTFOUND, i_parasite = NOTFOUND;
-int i_wolf_king = NOTFOUND, i_wolf_cub1 = NOTFOUND, i_wolf_cub2 = NOTFOUND;
-int i_scapegoat = NOTFOUND;
+//int i_wolf_king = NOTFOUND, i_wolf_cub1 = NOTFOUND, i_wolf_cub2 = NOTFOUND;
+//int i_scapegoat = NOTFOUND;
+//extern int i_host;
 //extern int evasion_chance[DAMAGE_ROUND_4_SH + 1];
 //extern int scapegoat_chance[DAMAGE_ROUND_4_SH + 1];
 
@@ -116,7 +115,7 @@ int exert_BloodThirsty(Player *players, int i_predator,
 	}
 }
 
-int exert_GeneMutation(Player *player, int i_buyer,	int *price)
+int exert_GeneMutation(Player *player, INT_DB db, int i_buyer,	int *price)
 {
 	if (player->skills[GeneMutation])
 	{
@@ -137,18 +136,18 @@ int exert_GeneMutation(Player *player, int i_buyer,	int *price)
 	}
 }
 
-int exert_Paracitism(Player *players, int i_predator,
+int exert_Paracitism(Player *players, INT_DB db, int i_predator,
 	int i_prey, int damage, int res)
 {
-	if (i_parasite == NOTFOUND)
-	{
-		return 0;
-	}
 	if (res == FAIL)
 	{
 		int i_temp = i_predator;
 		i_predator = i_prey;
 		i_prey = i_temp;
+	}
+	if (i_parasite == NOTFOUND || i_host == NOTFOUND)
+	{
+		return 0;
 	}
 	if (i_predator == i_host)
 	{
@@ -163,10 +162,11 @@ int exert_Paracitism(Player *players, int i_predator,
 	}
 }
 
-int exert_Evasion(Player *players, int *i_prey, int damage)
+int exert_Evasion(Player *players, INT_DB db, int *i_prey, int damage)
 {
-	if (players[*i_prey - 1].skills[Evasion]
-		&& evasion_chance[damage] == ALIVE)
+	// 若本玩家拥有闪避技能且闪避技能尚可用
+	if (players[*i_prey - 1].skills[Evasion] 
+		&& evasion_chance == ACTIVE)
 	{
 		printf("%d号玩家发动了闪避！", *i_prey);
 		// 判断是否死亡
@@ -182,7 +182,7 @@ int exert_Evasion(Player *players, int *i_prey, int damage)
 			}
 		}
 		printf("被捕食对象更改为%d号玩家\n", *i_prey);
-		evasion_chance[damage] = DEAD;
+		evasion_chance = USED;
 		return 1;
 	}
 	else
@@ -206,7 +206,7 @@ int exert_Extinction(Player *players, int i_predator)
 	}
 }
 
-int exert_Cerberus(Player *players, int i_predator,	int damage)
+int exert_Cerberus(Player *players, INT_DB db, int i_predator,	int damage)
 {
 	if (players[i_predator - 1].skills[Cerberus])
 	{
@@ -242,29 +242,25 @@ int exert_Cerberus(Player *players, int i_predator,	int damage)
 	}
 }
 
-int exert_Scapegoat(Player *players, int *i_prey, int damage)
+int exert_Scapegoat(Player *players, INT_DB db, int *i_prey, int damage)
 {
-	if (i_scapegoat == NOTFOUND &&
-		scapegoat_chance[damage] == ALIVE)
-	{
-		return 0;
-	}
-	else
+	// 能成为替罪羊的玩家已出现且替罪羊技能尚可用
+	if (i_scapegoat != NOTFOUND && scapegoat_chance == ALIVE)
 	{
 		printf("请问%d号玩家你要成为%d号玩家的替罪羊吗？\n",
-			i_scapegoat, *i_prey);
-		printf("是则输入1，否则输入0：");
+			i_scapegoat + 1, *i_prey);
 		if (yes_or_no())
 		{
 			*i_prey = i_scapegoat;
+			printf("%d号玩家发动了替罪羊！", i_scapegoat);
+			scapegoat_chance = USED;
+			return 1;
 		}
-		printf("%d号玩家发动了替罪羊！", i_scapegoat);
-		scapegoat_chance[damage] = DEAD;
-		return 1;
 	}
+	return 0;
 }
 
-int exert_CallForWolfKing(Player *players, int i_predator,
+int exert_CallForWolfKing(Player *players, INT_DB db, int i_predator,
 	int i_prey, int damage)
 {
 	if (players[i_predator - 1].skills[CallForWolfKing])

@@ -124,11 +124,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="blood_log.c" />
+    <ClCompile Include="main.c" />
     <ClCompile Include="evolve_stage.c" />
     <ClCompile Include="exert_skill.c" />
     <ClCompile Include="free_stage.c" />
     <ClCompile Include="prey_stage.c" />
+    <ClCompile Include="set_skill.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="declaration.h" />

@@ -1,12 +1,3 @@
-﻿  blood_log.c
+﻿  main.c
 c:\users\hhw\source\repos\forest_evolution\blood_blog\declaration.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  evolve_stage.c
-c:\users\hhw\source\repos\forest_evolution\blood_blog\declaration.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  exert_skill.c
-c:\users\hhw\source\repos\forest_evolution\blood_blog\declaration.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  free_stage.c
-c:\users\hhw\source\repos\forest_evolution\blood_blog\declaration.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  prey_stage.c
-c:\users\hhw\source\repos\forest_evolution\blood_blog\declaration.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  正在生成代码...
   blood_blog.vcxproj -> C:\Users\hhw\source\repos\forest_evolution\Debug\blood_log.exe

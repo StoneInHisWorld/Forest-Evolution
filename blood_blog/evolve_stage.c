@@ -1,7 +1,7 @@
 #include "declaration.h"
 
 #ifdef USER
-void evolve_stage_UI(Player *players, int round)
+void evolve_stage_UI(Player *players, INT_DB db, int round)
 {
 	printf("________________\n");
 	printf("第%d轮进化阶段，可进行如下操作：\n", round);
@@ -50,7 +50,7 @@ void evolve_stage_UI(Player *players, int round)
 				continue;
 			}
 			// 拍卖技能卡
-			auction_UI(players, skil[i]);
+			auction_UI(players, db, skil[i]);
 			i++;
 		}
 		else if (strcmp(cmd, "ck") == 0)
@@ -78,7 +78,7 @@ void evolve_stage_UI(Player *players, int round)
 	} while (1);
 }
 
-void auction_UI(Player *players, SKIL s)
+void auction_UI(Player *players, INT_DB db, SKIL s)
 {
 	printf("\n");
 	printf("接下来要拍卖的技能为：");
@@ -93,7 +93,7 @@ void auction_UI(Player *players, SKIL s)
 		{
 			if (price > 0)
 			{
-				flag = auction(&players[buyer - 1], s, buyer, &price);
+				flag = auction(&players[buyer - 1], db, s, buyer, &price);
 			}
 			else
 			{
@@ -106,6 +106,12 @@ void auction_UI(Player *players, SKIL s)
 		}
 	} while (!flag);
 	printf("%d号玩家以%d滴血习得了%s技能！\n", buyer, price, skil_str);
+	// 设置技能初始参数
+	switch (s)
+	{
+	case Paracitism:i_parasite = buyer - 1; return;
+	default: return;
+	}
 }
 
 char *skill_display(SKIL s)
@@ -187,9 +193,9 @@ char *skill_display(SKIL s)
 	return skil_str;
 }
 
-int auction(Player *player, SKIL skil, int buyer, int *price)
+int auction(Player *player, INT_DB db, SKIL skil, int buyer, int *price)
 {
-	exert_GeneMutation(player, buyer, price);
+	exert_GeneMutation(player, db, buyer, price);
 	if (player->blood - *price > 0 && player->blood - *price < 5)
 	{
 		printf("拍卖后%d号玩家的生命值将会非常低，还要继续吗？\n", buyer);

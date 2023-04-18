@@ -3,7 +3,7 @@
 extern int dead_players[NUM_PLAYER]; // 须初始化成全0
 
 #ifdef USER
-void prey_stage_UI(Player *players, int basic_damage)
+void prey_stage_UI(Player *players, INT_DB db, int basic_damage)
 {
 	int p1, p2;
 	printf("每次捕食伤害为%d点\n捕食操作格式如下：\n", basic_damage);
@@ -22,7 +22,7 @@ void prey_stage_UI(Player *players, int basic_damage)
 			char res = getchar();
 			exert_BloodThirsty(players, p1, p2, res, &prey_damage);
 			prey(players, p1, p2, res, prey_damage, USE_CARD);
-			
+			exert_Paracitism(players, db, p1, p2, prey_damage, res);
 		}
 		else if (p1 == 0 && p2 == 0)
 		{

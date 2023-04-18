@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="blood_log.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="free_stage.c">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -28,6 +25,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="exert_skill.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="set_skill.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

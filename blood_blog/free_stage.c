@@ -1,6 +1,6 @@
 #include "declaration.h"
 
-void free_stage_UI(Player *players, int round)
+void free_stage_UI(Player *players, INT_DB db, int round)
 {
 	printf("________________\n");
 	printf("第%d轮自由阶段，%d分钟计时开始，裁判可进行如下操作：\n", round, FREESTAGE_SPAN);
@@ -32,6 +32,7 @@ void free_stage_UI(Player *players, int round)
 		{
 			printf("输入的命令不正确，请重新输入！\n");
 		}
+		set_Paracitism(players, db);
 	} while (1);
 	return;
 	printf("________________\n");
